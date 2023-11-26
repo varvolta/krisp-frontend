@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    width: 330px;
+    min-width: 330px;
+}
+
+.label {
+    margin-bottom: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}

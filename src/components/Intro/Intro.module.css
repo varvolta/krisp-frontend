@@ -1,0 +1,43 @@
+.intro {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-gray-dark);
+    z-index: 1;
+    pointer-events: none;
+    animation: 300ms ease-out 2s fade forwards;
+}
+
+.logo {
+    position: absolute;
+    filter: invert(100%);
+    animation: 2s cubic-bezier(0.25, 1, 0.5, 1) place forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes place {
+    0% {
+        transform: translate(-50%, -50%) scale(5) rotate(-90deg);
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0, 0) scale(1) rotate(0);
+        left: 80px;
+        top: 16px;
+    }
+}

@@ -1,0 +1,21 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url(fonts.css);
+
+:root {
+	font-family: Lexend, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+
+	color: var(--color-text);
+	background-color: var(--color-gray-dark);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	color: var(--color-text);
+}

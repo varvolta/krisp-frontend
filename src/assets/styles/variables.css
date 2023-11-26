@@ -1,0 +1,12 @@
+:root {
+    --color-accent: rgba(0, 122, 255);
+    --color-accent-light: rgb(53, 151, 255);
+    --color-accent-dark: rgb(0, 85, 175);
+    --color-secondary-light: #008b6d38;
+    --color-secondary-dark: #008B6E;
+    --color-text: rgb(230, 230, 230);
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-gray: rgb(50, 50, 50);
+    --color-gray-light: rgb(80, 80, 80);
+    --color-gray-dark: rgb(30, 30, 30);
+}
