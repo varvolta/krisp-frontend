@@ -14,7 +14,7 @@ const Subscription = ({ languages, experiences, positions, salaryFrom, salaryTo,
             </div>
             <div className={s.section}>
                 <div className={s.title}>Tech Languages</div>
-                <div className={s.tags}>
+                <div className={s.tags} style={{ minHeight: 58 }}>
                     {languages.map((language, index) => (
                         <div key={index} className={s.tag}>
                             {language.value}

@@ -8,47 +8,29 @@ import CandidatesApi from '../../api/candidatesApi'
 import SubscriptionsApi from '../../api/subscriptionsApi'
 import logo from '../../assets/images/logo.svg'
 import Subscription from '../../components/Subscription'
+import Subscriptions from '../../features/Subscriptions'
 
 const Main = () => {
     const candidatesApi = useMemo(() => new CandidatesApi(), [])
     const subscriptionsApi = useMemo(() => new SubscriptionsApi(), [])
     const [subscriptions, setSubscriptions] = useState([])
-    const [selectedSubscriptionIndex, setSelectedSubscriptionIndex] = useState()
 
-    const renderSubscriptions = (subscriptions) => {
-        if (subscriptions.length) {
-            return (
-                <>
-                    <div className={s.title}>Your subscriptions</div>
-                    <div className={s.subscriptions}>
-                        {subscriptions.map((subscription, index) => (
-                            <Subscription
-                                key={index}
-                                {...subscription}
-                                totalCandidates={0}
-                                newCandidates={0}
-                                selected={selectedSubscriptionIndex === index}
-                                onClick={() => setSelectedSubscriptionIndex(index)}
-                            />
-                        ))}
-                    </div>
-                </>
-            )
-        } else {
-            return (
-                <div className={s.no_subscriptions}>No active subscriptions</div>
-            )
+    const handleSubscriptionSelect = ({ languages, experiences, positions, salaryFrom, salaryTo }) => {
+        const data = {
+            languages: languages.map(({ key }) => key),
+            experiences: experiences.map(({ key }) => key),
+            positions: positions.map(({ key }) => key),
+            salaryFrom,
+            salaryTo
         }
     }
 
     return (
         <div className={s.main}>
             <Header title={'Welcome to Dev Hunter'} right={<Button>Generate new candidates</Button>} logo={logo} />
-            <div className={s.row} style={{ gap: 80 }}>
+            <div className={s.content}>
                 <CreateSubscription onCreate={subscription => setSubscriptions(value => [...value, subscription])} />
-                <div className={s.column}>
-                    {renderSubscriptions(subscriptions)}
-                </div>
+                <Subscriptions subscriptions={subscriptions} onSelect={handleSubscriptionSelect} />
             </div>
             {/* <Intro /> */}
         </div>
