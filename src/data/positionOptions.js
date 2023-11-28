@@ -1,23 +1,19 @@
 const positionOptions = [
     {
-        key: 'junior',
-        value: 'Junior'
+        key: 'full-stack',
+        value: 'Full Stack'
     },
     {
-        key: 'mid-level',
-        value: 'Mid Level'
+        key: 'front-end',
+        value: 'Front End'
     },
     {
-        key: 'senior',
-        value: 'Senior'
+        key: 'back-end',
+        value: 'Back End'
     },
     {
-        key: 'principal',
-        value: 'Principal'
-    },
-    {
-        key: 'architect',
-        value: 'Architect'
+        key: 'db-engineer',
+        value: 'DB Engineer'
     }
 ]
 

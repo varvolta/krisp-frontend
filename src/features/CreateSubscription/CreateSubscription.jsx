@@ -16,11 +16,11 @@ const CreateSubscription = ({ onCreate }) => {
 
     const handleCreate = useCallback(() => {
         onCreate?.({
-            languages,
-            experiences,
-            positions,
-            salaryFrom,
-            salaryTo
+            languages: languages.map(({ key }) => key),
+            experiences: experiences.map(({ key }) => key),
+            positions: positions.map(({ key }) => key),
+            salaryFrom: Number(salaryFrom),
+            salaryTo: Number(salaryTo)
         })
 
         setLanguages([])

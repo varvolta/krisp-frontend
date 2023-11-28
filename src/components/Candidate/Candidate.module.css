@@ -1,0 +1,79 @@
+.candidate {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid var(--color-gray-light);
+    width: 330px;
+    position: relative;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: var(--color-gray-light);
+}
+
+.name {
+    font-size: 18px;
+}
+
+.new {
+    position: absolute;
+    height: 16px;
+    padding: 0 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    top: 20px;
+    font-size: 11px;
+    background-color: var(--color-new);
+    color: var(--color-gray-dark);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: var(--color-gray);
+    box-sizing: border-box;
+    border: 1px solid var(--color-gray-light);
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.tag.selected {
+    border: 1px solid var(--color-secondary-dark);
+    background-color: var(--color-secondary-light);
+}

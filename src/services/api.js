@@ -1,7 +1,6 @@
 class Api {
     constructor(...paths) {
         this.url = paths.join('/')
-        console.log('API created for', this.url)
     }
 
     request(path, options) {
@@ -18,7 +17,7 @@ class Api {
         if (path?.length) url += '/' + path
 
         return new Promise((resolve, reject) => {
-            fetch(this.url, options)
+            fetch(url, options)
                 .then(res => {
                     if (!res.ok) throw new Error(res.statusText)
                     return res.json()
@@ -32,26 +31,26 @@ class Api {
         return this.request(path, options)
     }
 
-    post(path, data, options = {}) {
+    post(path, payload, options = {}) {
         return this.request(path, {
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify(payload),
             ...options
         })
     }
 
-    put(path, data, options = {}) {
+    put(path, payload, options = {}) {
         return this.request(path, {
             method: 'PUT',
-            body: JSON.stringify(data),
+            body: JSON.stringify(payload),
             ...options
         })
     }
 
-    delete(path, data, options = {}) {
+    delete(path, payload, options = {}) {
         return this.request(path, {
             method: 'DELETE',
-            body: data ? JSON.stringify(data) : undefined,
+            body: payload ? JSON.stringify(payload) : undefined,
             ...options
         })
     }

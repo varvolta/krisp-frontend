@@ -3,7 +3,6 @@ import Icon from '../Icon'
 import s from './Subscription.module.css'
 
 const Subscription = ({ languages, experiences, positions, salaryFrom, salaryTo, totalCandidates, newCandidates, className, style, selected, onClick }) => {
-
     return (
         <div className={classNames(s.subscription, { [s.selected]: selected }, className)} style={style} onClick={onClick}>
             {selected && <div className={s.icon}>

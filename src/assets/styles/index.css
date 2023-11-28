@@ -7,6 +7,7 @@
 	font-weight: 400;
 	font-size: 14px;
 
+	color-scheme: dark;
 	color: var(--color-text);
 	background-color: var(--color-gray-dark);
 

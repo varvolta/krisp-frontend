@@ -1,20 +1,24 @@
 const experienceOptions = [
     {
-        key: 'full-stack',
-        value: 'Full Stack'
+        key: 'junior',
+        value: 'Junior'
     },
     {
-        key: 'front-end',
-        value: 'Front End'
+        key: 'mid-level',
+        value: 'Mid Level'
     },
     {
-        key: 'back-end',
-        value: 'Back End'
+        key: 'senior',
+        value: 'Senior'
     },
     {
-        key: 'db-engineer',
-        value: 'DB Engineer'
+        key: 'principal',
+        value: 'Principal'
     },
+    {
+        key: 'architect',
+        value: 'Architect'
+    }
 ]
 
 export default experienceOptions
