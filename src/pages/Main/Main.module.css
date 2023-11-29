@@ -1,11 +1,13 @@
 .main {
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding: 0 80px;
+    position: fixed;
+    inset: 0;
+    overflow: auto;
 }
 
 .content {
     display: flex;
     gap: 80px;
+    padding: 0 80px;
 }
